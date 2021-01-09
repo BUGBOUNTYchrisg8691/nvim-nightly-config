@@ -16,6 +16,7 @@ wo.number = true
 g.showmatch = true
 
 g.encoding = 'utf-8'
+g.hidden = true
 g.termguicolors = true
 o.splitright = true
 o.splitbelow = true
@@ -33,4 +34,5 @@ g.smartcase = true
 g.incsearch = true
 g.hlsearch = true
 
-
+g.backspace = 'indent,eol,start'
+b.fileformat = 'unix'

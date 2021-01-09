@@ -23,6 +23,16 @@ autocmd BufWinEnter * silent NERDTreeMirror
 "let g:lightline.subseparator = { 'left': '|', 'right': '|' }
 "let g:lightline.subseparator = { 'left': ' ', 'right': ' ' }
 
+"----------------AIRLINE----------------
+let g:airline_theme = 'murmur'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
 "--------------COC SETTING--------------
 "''''''''''''''''''''''''''''''''''''''"
 " TextEdit might fail if hidden is not set.
@@ -209,3 +219,14 @@ source ~/.config/nvim/config/barbarconf.vim
 	"\   'luapad_status': 'luapad#lightline_status',
 	"\ },
 	"\ }
+
+" -----------------VIM-CTRLSPACE-------------------
+let g:CtrlSpaceDefaultMappingKey = '<C-SPACE> '
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+let g:CtrlSpaceSaveWorkspaceOnExit = 1
+hi link CtrlSpaceNormal   PMenu
+hi link CtrlSpaceSelected PMenuSel
+hi link CtrlSpaceSearch   Search
+"hi link CtrlSpaceSearch   IncSearch
+hi link CtrlSpaceStatus   StatusLine

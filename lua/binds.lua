@@ -25,6 +25,15 @@ km('n', '<leader>tt', ':sp term://tmux <bar> :resize 15<CR> <bar> a', { noremap 
 km('n', '<leader>gd', ':Gvdiff<CR>', { noremap = true, silent = true })
 km('n', 'gdh', ':diffget //2<CR>', { noremap = true, silent = true })
 km('n', 'gdl', ':diffget //2<CR>', { noremap = true, silent = true })
+km('n', '<leader>ga', ':Git add .<CR>', { noremap = true, silent = false })
+km('n', '<leader>gs>', ':Git<CR>', { noremap = true, silent = false })
+km('n', '<leader>gl>', ':Git pull<CR>', { noremap = true, silent = false })
+km('n', '<leader>gh>', ':Git push<CR>', { noremap = true, silent = false })
+km('n', '<leader>g<>', ':Git pull', { noremap = true, silent = false })
+km('n', '<leader>g>>', ':Git push', { noremap = true, silent = false })
+km('n', '<leader>gf>', ':Git fetch', { noremap = true, silent = false })
+km('n', '<leader>gu>', ':Git fetch upstream<CR>', { noremap = true, silent = false })
+
 
 -- Magic buffer-picking mode
 km('n', '<C-s>', ':BufferPick<CR>', { noremap = true, silent = true })
@@ -53,3 +62,7 @@ km('n', '<A-c>', ':BufferClose<CR>', { noremap = true, silent = true })
 km('n', '<A-a>', ':BufferWipeout<CR>', { noremap = true, silent = true })
 -- Close all but current buffer
 km('n', '<A-x>', ':BufferCloseAllButCurrent<CR>', { noremap = true, silent = true })
+
+-- TagBar
+-- Toggle tagbar
+km('n', '<F8>', ':TagbarToggle<CR>', { noremap = false, silent = false })
