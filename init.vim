@@ -1,6 +1,6 @@
 lua require 'plugs'
-lua require 'binds'
 lua require 'config'
+lua require 'binds'
 
 filetype plugin on
 filetype on
@@ -8,7 +8,7 @@ filetype on
 set undodir = "~/.config/nvim/undo"
 
 "--------------STATUSLINE---------------
-"set statusline+=%{FugitiveStatusline()}
+set statusline+=%{FugitiveStatusline()}
 
 "---------------NERDTree----------------
 " Exit Vim if NERDTree is the only window left.
@@ -16,6 +16,12 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
     \ quit | endif
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * silent NERDTreeMirror
+
+"---------------LIGHTLINE---------------
+let g:lightline.separator = { 'left': ' ', 'right': ' ' }
+"let g:lightline.separator = { 'left': ' ', 'right': ' ' }
+"let g:lightline.subseparator = { 'left': '|', 'right': '|' }
+"let g:lightline.subseparator = { 'left': ' ', 'right': ' ' }
 
 "--------------COC SETTING--------------
 "''''''''''''''''''''''''''''''''''''''"
@@ -161,7 +167,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline^=%{FugitiveStatusline()}%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
@@ -180,3 +186,26 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" BARBAR Configuration
+source ~/.config/nvim/config/barbarconf.vim
+
+" Luapad lightline example configuration
+"let g:lightline = {
+	"\ 'active': {
+	"\   'left': [
+	"\     ['mode', 'paste'],
+	"\     ['readonly', 'filename', 'modified'],
+	"\     ['luapad_msg']
+          "\   ],
+	"\ 'right': [
+	"\   ['luapad_status'],
+	"\   ['lineinfo'],
+	"\   ['percent'],
+	"\ ],
+          "\ },
+	"\ 'component_function': {
+	"\   'luapad_msg': 'luapad#lightline_msg',
+	"\   'luapad_status': 'luapad#lightline_status',
+	"\ },
+	"\ }

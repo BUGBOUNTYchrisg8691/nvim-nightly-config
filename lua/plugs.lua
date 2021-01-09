@@ -13,7 +13,7 @@ return require('packer').startup(function()
   -- Completion
   use {'neoclide/coc.nvim'}
   -- Lua Completion
-  --use {'rafcamlet/coc-nvim-lua'}
+  use {'rafcamlet/coc-nvim-lua'}
 
   -- IDE-like plugins
   use {'mhinz/vim-startify'}
@@ -22,9 +22,9 @@ return require('packer').startup(function()
   use {'tpope/vim-fugitive'}
   use {'tpope/vim-repeat'}
   use {'preservim/nerdcommenter'}
-  use {'preservim/nerdtree'}
-  use {'Xuyuanp/nerdtree-git-plugin'}
-  use {'ryanoasis/vim-devicons'}
+  use {'preservim/nerdtree', {'Xuyuanp/nerdtree-git-plugin', {'ryanoasis/vim-devicons'}}}
+  -- Tabline Management
+  use {'romgrk/barbar.nvim', {'kyazdani42/nvim-web-devicons'}}
 
   -- File Searching
   use {'ctrlpvim/ctrlp.vim'}
@@ -35,5 +35,13 @@ return require('packer').startup(function()
   --use {'neovim/nvim-lspconfig'}
   --use {'nvim-lua/completion-nvim'}
   --use {'nvim-lua/diagnostic-nvim'}
+  -- Lua Plugins (misc)
+  use {'svermeulen/vimpeccable'}
+  use {'nvim-lua/plenary.nvim'}
+  use {'nvim-lua/popup.nvim'}
+  use {'norcalli/nvim_utils'}
+  use {'bfredl/nvim-luadev'}
+  use {'rafcamlet/nvim-luapad'}
+  use {'euclidianAce/BetterLua.vim'}
 end)
 
