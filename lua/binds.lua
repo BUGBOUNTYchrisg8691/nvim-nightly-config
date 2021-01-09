@@ -23,7 +23,7 @@ km('n', '<C-f>', ':NERDTreeFind<CR>', { noremap = true, silent = true })
 km('n', '<leader>tt', ':sp term://tmux <bar> :resize 15<CR> <bar> a', { noremap = true, silent = true })
 
 km('n', '<leader>gg', ':Git', { noremap = true, silent = false })
-km('n', '<leader>gd', ':Gvdiff<CR>', { noremap = true, silent = true })
+km('n', '<leader>gv', ':Gvdiff<CR>', { noremap = true, silent = true })
 km('n', 'gdh', ':diffget //2<CR>', { noremap = true, silent = true })
 km('n', 'gdl', ':diffget //2<CR>', { noremap = true, silent = true })
 km('n', '<leader>gs', ':Gstatus<CR>', { noremap = true, silent = false })
@@ -33,7 +33,8 @@ km('n', '<leader>g<>', ':Git pull', { noremap = true, silent = false })
 km('n', '<leader>g>>', ':Git push', { noremap = true, silent = false })
 km('n', '<leader>gf>', ':Git fetch', { noremap = true, silent = false })
 km('n', '<leader>gu>', ':Git fetch upstream<CR>', { noremap = true, silent = false })
-
+km('n', '<leader>gd', ':Git difftool<CR>', { noremap = true, silent = false })
+km('n', '<leader>gm', ':Git mergetool<CR>', { noremap = true, silent = false })
 
 -- Magic buffer-picking mode
 km('n', '<C-s>', ':BufferPick<CR>', { noremap = true, silent = true })

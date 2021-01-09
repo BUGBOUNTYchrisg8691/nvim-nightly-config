@@ -24,7 +24,7 @@ autocmd BufWinEnter * silent NERDTreeMirror
 "let g:lightline.subseparator = { 'left': ' ', 'right': ' ' }
 
 "----------------AIRLINE----------------
-let g:airline_theme = 'murmur'
+let g:airline_theme = 'wombat'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 " powerline symbols

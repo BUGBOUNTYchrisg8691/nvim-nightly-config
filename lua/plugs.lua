@@ -5,16 +5,18 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt=true}
 
   -- Appearance
-  use {'sainnhe/gruvbox-material'}
+  use 'sainnhe/gruvbox-material'
 
   -- Statusline
   --use {'itchyny/lightline.vim'}
   use {'vim-airline/vim-airline', {'vim-airline/vim-airline-themes'}}
 
   -- Completion
-  use {'neoclide/coc.nvim'}
-  -- Lua Completion
-  use {'rafcamlet/coc-nvim-lua'}
+  use 'neoclide/coc.nvim'
+  -- Lua
+  use 'rafcamlet/coc-nvim-lua'
+  -- Python
+  use 'davidhalter/jedi-vim'
 
   -- IDE-like plugins
   use 'mhinz/vim-startify'
