@@ -18,7 +18,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufWinEnter * silent NERDTreeMirror
 
 "---------------LIGHTLINE---------------
-let g:lightline.separator = { 'left': ' ', 'right': ' ' }
+"let g:lightline.separator = { 'left': ' ', 'right': ' ' }
 "let g:lightline.separator = { 'left': ' ', 'right': ' ' }
 "let g:lightline.subseparator = { 'left': '|', 'right': '|' }
 "let g:lightline.subseparator = { 'left': ' ', 'right': ' ' }
@@ -167,7 +167,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{FugitiveStatusline()}%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
