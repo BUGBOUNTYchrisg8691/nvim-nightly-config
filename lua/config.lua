@@ -36,3 +36,9 @@ g.hlsearch = true
 
 g.backspace = 'indent,eol,start'
 b.fileformat = 'unix'
+
+--g.guifont = 'Fira Code iCursive S12:style=Italic:'
+
+-- For Completion
+--g.completeopt = 'menu,menuone,noinsert,noselect'
+--o.completeopt = 'menu,menuone,noinsert,noselect'

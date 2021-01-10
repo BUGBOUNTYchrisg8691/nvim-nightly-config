@@ -4,7 +4,7 @@ lua require 'binds'
 
 filetype plugin on
 filetype on
-
+"set guifont=FiraCode\ Nerd\ Font
 set undodir = "~/.config/nvim/undo"
 
 "--------------STATUSLINE---------------
